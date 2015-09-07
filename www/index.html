@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
+    <title>My Awesome Ionic Calculator!</title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -23,68 +23,67 @@
     <script src="js/app.js"></script>
     <script src="js/mainCtrl.js"></script>
   </head>
-  <body ng-app="starter" ng-controller ='mainCtrl'>
+  <body ng-app="starter" ng-controller ='MainCtrl'>
 
-    <ion-pane>
+    <div class = "container">
+      <ion-pane>
       <ion-header-bar class="bar-energized">
         <h1 class="title">Awesome Calculator!!!</h1>
       </ion-header-bar>
       <ion-content>
-    <div class = "container">
-
 
       <div class="display">{{display}}</div>
       <div class = "row">
           <div class="button-bar">
-          <a class="button button-calm" ng-click =''>X&sup2</a>
-          <a class="button button-calm" ng-click =''>sin</a>
-          <a class="button button-calm" ng-click =''>cos</a>
-          <a class="button button-calm" ng-click =''>tan</a>
+          <a class="button button-calm" ng-click ="squared()">X&sup2</a>
+          <a class="button button-calm" ng-click ="sin()">sin</a>
+          <a class="button button-calm" ng-click ="cos()">cos</a>
+          <a class="button button-calm" ng-click ="tan()">tan</a>
           </div>
           </div>
       <div class="row">
           <div class="button-bar">
-          <a class="button" ng-click =''>&radic;</a>
-          <a class="button" ng-click =''>sin&#x207b;&sup1;</a>
-          <a class="button" ng-click =''>cos&#x207b;&sup1;</a>
-          <a class="button" ng-click =''>tan&#x207b;&sup1;</a>
+          <a class="button button-positive" ng-click ='root()'>&radic;</a>
+          <a class="button button-positive" ng-click ="asin()">asin&#x207b;&sup1;</a>
+          <a class="button button-positive" ng-click ="acos()">acos&#x207b;&sup1;</a>
+          <a class="button button-positive" ng-click ="atan()">atan&#x207b;&sup1;</a>
           </div>
           </div>
       <div class="row">
           <div class="button-bar">
-          <a class="button" ng-click ='number(1)'>1</a>
-          <a class="button" ng-click ='number(2)'>2</a>
-          <a class="button" ng-click ='number(3)'>3</a>
-          <a class="button" ng-click ='divide()'>&#47;</a>
+          <a class="button button-calm" ng-click ='number(1)'>1</a>
+          <a class="button button-calm" ng-click ='number(2)'>2</a>
+          <a class="button button-calm" ng-click ='number(3)'>3</a>
+          <a class="button button-calm" ng-click ='divide()'>&#47;</a>
           </div>
           </div>
       <div class="row">
           <div class="button-bar">
-          <a class="button" ng-click ='number(4)'>4</a>
-          <a class="button" ng-click ='number(5)'>5</a>
-          <a class="button" ng-click ='number(6)'>6</a>
-          <a class="button" ng-click='add()'>+</a>
+          <a class="button button-positive" ng-click ='number(4)'>4</a>
+          <a class="button button-positive" ng-click ='number(5)'>5</a>
+          <a class="button button-positive" ng-click ='number(6)'>6</a>
+          <a class="button button-positive" ng-click='add()'>+</a>
           </div>
           </div>
       <div class="row">
           <div class="button-bar">
-          <a class="button" ng-click ='number(7)'>7</a>
-          <a class="button" ng-click ='number(8)'>8</a>
-          <a class="button" ng-click ='number(9)'>9</a>
-          <a class="button" ng-click='multiply()'>*</a>
+          <a class="button button-positive" ng-click ='number(7)'>7</a>
+          <a class="button button-positive" ng-click ='number(8)'>8</a>
+          <a class="button button-positive" ng-click ='number(9)'>9</a>
+          <a class="button button-positive" ng-click='multiply()'>*</a>
           </div>
           </div>
         <div class="row">
           <div class="button-bar">
-          <a class="button" ng-click ='number(0)'>0</a>
-          <a class="button" ng-click =''>&#46;</a>
-          <a class="button" ng-click ='subtract()'>-</a>
+          <a class="button button-calm" ng-click ='number(0)'>0</a>
+          <a class="button button-calm" ng-click =''>&#46;</a>
+          <a class="button button-calm" ng-click ='subtract()'>-</a>
           </div>
           </div>
         <div class="row">
           <div class="button-bar">
-          <a class="button" ng-click ='clearAll()'>clear</a>
-          <a class="button" ng-click ='onClickCalculate()'>=</a>
+          <a class="button button-assertive" ng-click ='clearAll()'>clear</a>
+          <a class="button button-calm" ng-click ='onClickCalculate()'>=</a>
           </div>
           </div>
       </div> <!-- /////end container div

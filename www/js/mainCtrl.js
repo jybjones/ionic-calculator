@@ -1,6 +1,6 @@
 angular.module('starter')
 
-.controller('mainCtrl', ['$scope', function($scope) {
+.controller('MainCtrl', ['$scope', function($scope) {
   $scope.message = 'hello';
   $scope.display = 0;
   $scope.result = 0;
@@ -46,17 +46,41 @@ angular.module('starter')
     $scope.result = num1 / num2
     $scope.display = '';
     };
-   $scope.sin = function (num) {
-    $scope.operation = '&#x207b;&sup1';
-    $scope.result = Math.sin(num)
+  $scope.squared= function (num) {
+    $scope.operation = 'X&sup2';
+    $scope.result = num*num;
     $scope.display = '';
     };
-  // $scope.squared = function (num1) {
-  //   $scope.operation = &radic;
-  //   $scope.result = num1 * num1
-  //   $scope.display = '';
-  //   };
-
+  $scope.sin = function(num){
+      $scope.operation = 'sin';
+      $scope.result = Math.sin(num);
+      $scope.display = '';
+     };
+  $scope.cos = function(num){
+      $scope.operation = 'cos';
+      $scope.result = Math.cos(num);
+      $scope.display = '';
+     };
+  $scope.tan = function(num){
+      $scope.operation = 'tan';
+      $scope.result = Math.tan(num);
+      $scope.display = '';
+     };
+  $scope.root = function(num){
+      $scope.operation = 'root';
+      $scope.result = Math.sqrt(num);
+      $scope.display = '';
+     };
+  $scope.asin = function(num){
+      $scope.operation = 'asin';
+      $scope.result = Math.asin(num);
+      $scope.display = '';
+     };
+  $scope.atan = function(num){
+      $scope.operation = 'asin';
+      $scope.result = Math.atan(num);
+      $scope.display = '';
+     };
 ////////////////actions here///////////
 $scope.onClickCalculate = function() {
   $scope.x = parseInt($scope.x);
@@ -83,14 +107,34 @@ $scope.onClickCalculate = function() {
         $scope.divide($scope.x,$scope.y);
         $scope.display = $scope.result;
       }
-    else if ($scope.operation === '&#x207b;&sup1') {
+    else if ($scope.operation === 'sin') {
         $scope.sin($scope.x);
         $scope.display = $scope.result;
       }
-    // else if ($scope.operation === '&radic') {
-    //     $scope.squared($scope.x);
-    //     $scope.display = $scope.result;
-    //   }
+    else if ($scope.operation === 'X&sup2') {
+        $scope.squared($scope.x);
+        $scope.display = $scope.result;
+      }
+    else if ($scope.operation === 'cos') {
+        $scope.cos($scope.x);
+        $scope.display = $scope.result;
+      }
+    else if ($scope.operation === 'tan') {
+        $scope.tan($scope.x);
+        $scope.display = $scope.result;
+      }
+    else if ($scope.operation === 'root') {
+        $scope.root($scope.x);
+        $scope.display = $scope.result;
+      }
+    else if ($scope.operation === 'asin') {
+        $scope.asin($scope.x);
+        $scope.display = $scope.result;
+      }
+    else if ($scope.operation === 'atan') {
+        $scope.asin($scope.x);
+        $scope.display = $scope.result;
+      }
 }
 
 

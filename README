@@ -1,0 +1,13 @@
+A simple calculator made with Cordova and Ionic, written in JavScript and AngularJS.
+
+To Install dependencies:
+
+    $ npm install cordova ionic
+
+To Run locally:
+    $ ionic serve
+
+To Run Emulator:
+    $ ionic platform add android
+    $ ionic build android
+    $ ionic emulate android
